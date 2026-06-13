@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Comic Neue', cursive;
+    background-color: #FFF8E7;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .sketch-border {
+    border: 3px solid #2D2D2D;
+    border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+    position: relative;
+  }
+
+  .sketch-border-sm {
+    border: 2px solid #2D2D2D;
+    border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  }
+
+  .sketch-border-hover:hover {
+    border-radius: 15px 255px 15px 225px / 225px 15px 255px 15px;
+    transition: border-radius 0.3s ease;
+  }
+
+  .doodle-shadow {
+    box-shadow: 4px 4px 0px #2D2D2D;
+  }
+
+  .doodle-shadow-hover:hover {
+    box-shadow: 6px 6px 0px #2D2D2D;
+    transform: translate(-2px, -2px);
+    transition: all 0.15s ease;
+  }
+
+  .doodle-shadow-active:active {
+    box-shadow: 2px 2px 0px #2D2D2D;
+    transform: translate(2px, 2px);
+  }
+
+  .cream-panel {
+    background: #FFF8E7;
+    border: 3px solid #2D2D2D;
+    border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+    box-shadow: 5px 5px 0px #2D2D2D;
+  }
+
+  .monster-blob {
+    position: absolute;
+    border-radius: 50% 40% 60% 45% / 55% 50% 45% 55%;
+    border: 2px solid #2D2D2D;
+  }
+
+  .btn-gloob {
+    background: #FFE66D;
+    border: 3px solid #2D2D2D;
+    border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+    box-shadow: 4px 4px 0px #2D2D2D;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    transition: all 0.15s ease;
+  }
+
+  .btn-gloob:hover {
+    box-shadow: 6px 6px 0px #2D2D2D;
+    transform: translate(-2px, -2px);
+  }
+
+  .btn-gloob:active {
+    box-shadow: 2px 2px 0px #2D2D2D;
+    transform: translate(2px, 2px);
+  }
+
+  .btn-gloob-green {
+    background: #6BCB77;
+    border: 3px solid #2D2D2D;
+    border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+    box-shadow: 4px 4px 0px #2D2D2D;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    transition: all 0.15s ease;
+  }
+
+  .btn-gloob-green:hover {
+    box-shadow: 6px 6px 0px #2D2D2D;
+    transform: translate(-2px, -2px);
+  }
+
+  .btn-gloob-green:active {
+    box-shadow: 2px 2px 0px #2D2D2D;
+    transform: translate(2px, 2px);
+  }
+
+  .input-gloob {
+    background: #FFFFFF;
+    border: 2px solid #2D2D2D;
+    border-radius: 15px 255px 15px 225px / 225px 15px 255px 15px;
+    font-family: 'Patrick Hand', cursive;
+    outline: none;
+    transition: all 0.2s ease;
+  }
+
+  .input-gloob:focus {
+    border-color: #4ECDC4;
+    box-shadow: 3px 3px 0px #4ECDC4;
+  }
+
+  .task-card {
+    background: #FFF8E7;
+    border: 3px solid #2D2D2D;
+    border-radius: 20px;
+    box-shadow: 4px 4px 0px #2D2D2D;
+    transition: all 0.2s ease;
+  }
+
+  .task-card:hover {
+    box-shadow: 6px 6px 0px #2D2D2D;
+    transform: translate(-2px, -2px);
+  }
+}
+
+@keyframes monsterFloat1 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(5px, -8px) rotate(3deg); }
+  50% { transform: translate(-3px, -15px) rotate(-2deg); }
+  75% { transform: translate(8px, -5px) rotate(1deg); }
+}
+
+@keyframes monsterFloat2 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(-7px, -10px) rotate(-3deg); }
+  50% { transform: translate(5px, -20px) rotate(2deg); }
+  75% { transform: translate(-4px, -8px) rotate(-1deg); }
+}
+
+@keyframes monsterFloat3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(3px, -12px) scale(1.02); }
+  50% { transform: translate(-5px, -18px) scale(0.98); }
+  75% { transform: translate(6px, -6px) scale(1.01); }
+}
+
+.monster-float-1 { animation: monsterFloat1 4s ease-in-out infinite; }
+.monster-float-2 { animation: monsterFloat2 5s ease-in-out infinite; }
+.monster-float-3 { animation: monsterFloat3 3.5s ease-in-out infinite; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #FFF8E7; }
+::-webkit-scrollbar-thumb {
+  background: #2D2D2D;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  border: 2px solid #FFF8E7;
+}
